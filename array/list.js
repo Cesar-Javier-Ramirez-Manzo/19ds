@@ -24,6 +24,7 @@
     for(var i=0;i<x.length;i++){
 
         var acum =1
+        let w=0
 
         for(var c=i+1;c<x.length;c++){
         
@@ -32,7 +33,7 @@
             if(x[i]==x[c]&&si!=x[i]){
                 
                 si=x[i]
-                how.push(x[i])
+                w=(x[i])
                 break
             }
         }
@@ -54,7 +55,7 @@
         if(acum>1&&x[i]!=prev){
           
             prev=x[i]
-            how.push('esta '+acum+' veces    ')
+            how.push(w+' <--està '+acum+' veces    ')
         }
         
     }
@@ -62,4 +63,4 @@
 
 
 
-    console.log('Se repiten: '+how)
+    console.log('Nummeros que se repiten: '+how.slice())
