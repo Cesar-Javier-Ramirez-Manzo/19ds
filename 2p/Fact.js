@@ -26,7 +26,7 @@ class Factorial{
         
        }
        val2(this.x)
-       return c
+       return c+1
          
     }
     suce(){
