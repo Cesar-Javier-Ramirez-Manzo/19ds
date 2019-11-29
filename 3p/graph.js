@@ -95,6 +95,32 @@
             return isub
     
         }
+        isDigraph(){
+            let isD=true
+            for(var i=0;i<this.g.length;i++){
+                for(var b=0;b<this.g[i].l.length;b++){
+                    each(this.g,this.g[i].l[b],this.g[i].d)
+                }
+            }
+            function each(graph,data,value){
+                for(var c=0;c<graph.length;c++){
+                    if(data==graph[c].d){
+
+                        for(var de=0;de<graph[c].l.length;de++){
+
+                            if(graph[c].l[de]==value){
+                                isD=false
+                                
+                            }
+
+                        }
+                    }
+                }
+                return
+            }
+            return isD
+
+        }
      
     }
     
@@ -141,4 +167,6 @@
     console.log(g1.isMultigraph())
     console.log(g2.isMultigraph())
     g2.printG()
+
+    console.log(g1.isDigraph())
 })()
